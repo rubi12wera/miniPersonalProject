@@ -1,0 +1,136 @@
+<!--
+like qhat we did wednesday
+copy a simple website with 2 to 4 pages
+https://scotch.io/tutorials/single-page-apps-with-angularjs-routing-and-templating
+
+
+thsi wesite looks  cool try it
+	 http://ahinea.com/en/demo/angularjs-simple-website/#/
+
+
+
+a index.html has ng-view... app routes to homeTmlp.html >>then it calls the Directives.
+
+
+my app.js will have two routes. home and Products.
+	my home has a Directive, a controller to get my info from my service. ADN a service with my data.
+
+	my porudcts has a directive a controller to get my info from my service. ADN a service with my data.
+
+
+2 directives
+	(1 Template URl & data .css element)
+	
+		direct to a new html view using templateUrl
+		direct to a .html elemnt using template
+
+
+2 routes
+	in app.js :
+		themplate URl home, Product
+
+2 services 
+
+MAKE UP YOUR OWN DATA in own service or a different 
+
+if time left:
+
+
+PRACTICE css
+APIs to populate your data
+
+DONT START on firebase.. ANGULAR STUFF.. if you are done then use firebase...
+
+-->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+	<title>Angular Simple Website</title>
+</head>
+<body class="container">
+	<div class="header">
+		<ul class="nav nav-pills pull-right">
+			<li ng-class="{active: (locationPath=='/home')}" class="active">
+				<a href="#/home">Home</a>
+			</li>
+			<li ng-class="{active:(locationPath=='/students')}">
+				<a href="#/students">Students</a>
+			</li>
+			<li ng-class="{active:(locationPath=='/reviews')}">
+				<a href="#/reviews">Reviews</a>
+			</li>
+		</ul>
+		<h3 class="text-muted">DevMountain Camp Five!</h3>
+
+	</div>
+
+	<div ng-view="">	</div>
+
+
+
+
+	<div class="footer">
+		<p>
+			<a href="https://github.com/rubi12wera/miniPersonalProject">My GitHub</a>
+			<a href="https://devmounta.in/">DevMoutain</a>
+			
+		</p>
+		
+	</div>
+
+
+	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+
+
+<!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+
+
+<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.js"></script>
+
+<!-- Angular route -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+
+<!-- JS files -->
+	<script src="app.js"></script>
+	<script src="controllers/homecontrol.js"></script>
+	<script src="controllers/studentsControl.js"></script>
+	<script src="controllers/viewsCtrl.js"></script>
+	
+	<script src="directives/firstDirective.js"></script>
+	<script src="directives/secondDirective.js"></script>
+	<script src="directives/thirdDirective.js"></script>
+	<script src="services/students.js"></script>
+	<script src="services/timeService.js"></script>
+	<script src="services/comentServ.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

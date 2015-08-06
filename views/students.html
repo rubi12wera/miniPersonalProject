@@ -1,0 +1,20 @@
+<div class="jumbotron ng-scope">
+	<p class="lead">
+
+		 <dir-weather></dir-weather>
+		 
+		<show-time></show-time>
+	</p>
+	<p>
+	<a class="btn btn-lg btn-success" href="index.html#/reviews">Reviews</a>
+	</p>
+</div>
+
+<div class="row marketing ng-scope" ng-repeat= "user in users">
+	<img ng-src='{{user.pic}}'> 
+		<div>	
+        <h3 >{{user.name}}</h3>
+        </div>
+        <h4>{{user.city}}</h4>
+       
+</div>

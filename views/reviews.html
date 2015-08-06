@@ -1,0 +1,33 @@
+<div class="jumbotron ng-scope">
+	<h1>Deja tus comentarios!</h1>
+	<p class="lead">
+	
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mi urna, tincidunt ac lorem quis, pretium fermentum nunc. Mauris massa eros, finibus at gravida ac, suscipit sed magna. In et porta massa. In sed ipsum vehicula, scelerisque eros non, euismod purus. Donec et suscipit tellus. Proin tellus urna, placerat nec cursus ut, feugiat a metus. In iaculis diam nisl, sed dapibus lacus euismod a. Aenean et eros a augue condimentum mattis ac eget nisi. Integer imperdiet ligula at sollicitudin viverra. Nunc et mi at augue dapibus auctor. Donec porttitor, metus at malesuada pulvinar, diam sapien dapibus purus, in molestie eros ex in erat. Proin porta sollicitudin dolor in ornare.
+	</p>
+	<p>
+		<a class="btn btn-lg btn-success" href="index.html#/home">Home</a>
+	</p>
+
+</div>
+<div class="row marketing ng-scope">
+
+<form>
+			<fieldset>
+				<input type='text' class="form-control" placeholder='username' ng-model='username' required/>
+				<textarea class="form-control" rows="3" placeholder='next chat...' ng-model='newChatText'></textarea>
+				<button ng-click='sendChat(username, newChatText)' class="bbtn btn-primary" ng-disabled="newCommentForm.$invalid">Send</button>
+			</fieldset>
+		</form>
+
+    <ul>
+        <li ng-repeat=" chat in chats">
+
+ 		<h3>{{ chat.username }}</h3>
+ 		<h4> {{ chat.text }}</h4>
+
+ 		</li>
+    
+    </ul>
+
+
+</div>
